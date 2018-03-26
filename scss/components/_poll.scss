@@ -43,7 +43,7 @@
   &__options {
     &__item {
       &:not(:last-child){
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
     }
     &__label {
@@ -64,7 +64,7 @@
     border-top: 1px solid $color-border;
     padding: 2rem 3rem;
     margin: -3rem;
-    margin-top: 0rem;
+    margin-top: 3rem;
   }
 
   &__link:link,
