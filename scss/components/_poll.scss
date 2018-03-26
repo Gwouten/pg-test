@@ -1,4 +1,9 @@
 .poll {
+  @include media(medium) {
+    margin-left: 50%;
+    width: 50%;
+  }
+
   &__header {
     background: $color-red;
     overflow: hidden;
@@ -91,8 +96,5 @@
     &::before {
       transform: scaleX(1);
     }
-  }
-
-  &__btn {
   }
 }

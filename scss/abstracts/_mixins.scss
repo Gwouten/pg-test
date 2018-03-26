@@ -1,0 +1,11 @@
+// Query Manager
+
+$medium: 37.5em;     // 600px
+
+@mixin media($breakpoint) {
+    @if $breakpoint == medium {
+        @media only screen and (min-width: $medium) {
+            @content
+        }
+    };
+}
