@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Portfolio Wouter Deloof</title>
+  <title>Frontend Test - Wouter Deloof</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <!--
     NEW CSS for Iphone X (accommodates 'safe zone' for area with camera)
@@ -35,23 +35,32 @@
   <div class="poll">
 
     <div class="poll__header">
+      <img src="assets/img/icon_menu.svg" alt="menu icon" class="poll__header__icon" />
       <h1 class="heading-1 heading-white">Poll</h1>
     </div>
 
     <div class="poll__query">
       <h2 class="heading-2">Who is your favourite teletubbie?</h2>
       <form action="" class="poll__options">
-        <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--1">
-        <label class="poll__options__label" for="poll__option--1">Tinky Winky</label>
-        <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--2">
-        <label class="poll__options__label" for="poll__option--2">Dipsy</label>
-        <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--3">
-        <label class="poll__options__label" for="poll__option--3">Laa Laa</label>
-        <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--4">
-        <label class="poll__options__label" for="poll__option--4">Po</label>
+        <div class="pol__options__item">
+          <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--1">
+          <label class="poll__options__label" for="poll__option--1">Tinky Winky</label>
+        </div>
+        <div class="pol__options__item">
+          <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--2">
+          <label class="poll__options__label" for="poll__option--2">Dipsy</label>
+        </div>
+        <div class="pol__options__item">
+          <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--3">
+          <label class="poll__options__label" for="poll__option--3">Laa Laa</label>
+        </div>
+        <div class="pol__options__item">
+          <input type="radio" class="poll__options__item" name="poll__option" id="poll__option--4">
+          <label class="poll__options__label" for="poll__option--4">Po</label>
+        </div>
         <div class="poll__footer">
-          <a href="#" class="poll__link">See results</a>
-          <button class="poll__btn">Vote</button>
+          <a href="#" class="poll__link">See results &raquo;</a>
+          <button class="btn btn--poll">Vote</button>
         </div>
       </form>
     </div>

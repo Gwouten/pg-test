@@ -10,30 +10,87 @@
       position: absolute;
       height: 100%;
       width: 10rem;
-      background-color: $color-red-dark;
       top: 0;
       left: 0;
+      background-color: $color-red-dark;
       transform: skew(-20deg) translateX(-3rem);
+    }
+
+    &__icon {
+      height:60%;
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      width: auto;
+      transform: translateY(-50%);
     }
   }
 
   &__query {
     width: 100%;
-    background-color: $color-white;
+    background-color: $color-body-bg;
+    border: 1px solid $color-border;
+    border-top: none;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.25);
     padding: 3rem;
   }
 
   &__options {
     &__item {
+      &:not(:last-child){
+        margin-bottom: 2rem;
+      }
     }
     &__label {
+      font-size: 1.8rem;
+      margin-left: 1rem;
+      display: inline-block;
+      // transform: translateX(0rem);
+      transition: transform .2s;
+
+      &:hover {
+        transform: translateX(.5rem);
+      }
     }
   }
 
   &__footer {
+    background-color: $color-white;
+    border-top: 1px solid $color-border;
+    padding: 2rem 3rem;
+    margin: -3rem;
+    margin-top: 0rem;
   }
 
-  &__link {
+  &__link:link,
+  &__link:visited {
+    color: $color-blue;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    transition: all .2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all .2s;
+    }
+  }
+  
+  &__link:hover,
+  &__link:active {   
+    color: $color-blue-dark;
+
+    &::before {
+      transform: scaleX(1);
+    }
   }
 
   &__btn {
