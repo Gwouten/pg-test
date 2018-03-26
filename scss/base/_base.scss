@@ -11,5 +11,9 @@ html {
 }
 
 body {
+  background-color: $color-body-bg;
   box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem;
 }

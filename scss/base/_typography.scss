@@ -1,0 +1,17 @@
+%heading {
+  margin: 0;
+}
+
+.heading-white {
+  color: $color-white;
+}
+
+.heading-1 {
+  @extend %heading;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.heading-2 {
+  @extend %heading;
+}

@@ -1,5 +1,12 @@
+// Import fonts
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
 // Reset
 @import "../node_modules/normalize.css/normalize.css";
+
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
 // Base styling
 @import "base/base";
@@ -8,6 +15,7 @@
 @import "base/animations";
 
 // Components
+@import "components/poll";
 
 // Layout
 @import "layout/footer";

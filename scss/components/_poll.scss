@@ -1,0 +1,41 @@
+.poll {
+  &__header {
+    background: $color-red;
+    overflow: hidden;
+    padding: 1rem 9rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 10rem;
+      background-color: $color-red-dark;
+      top: 0;
+      left: 0;
+      transform: skew(-20deg) translateX(-3rem);
+    }
+  }
+
+  &__query {
+    width: 100%;
+    background-color: $color-white;
+    padding: 3rem;
+  }
+
+  &__options {
+    &__item {
+    }
+    &__label {
+    }
+  }
+
+  &__footer {
+  }
+
+  &__link {
+  }
+
+  &__btn {
+  }
+}
