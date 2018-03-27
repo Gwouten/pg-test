@@ -1,12 +1,13 @@
 {
-  "name": "Default",
+  "name": "default",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp watch",
+    "package": "gulp package"
   },
-  "author": "",
+  "author": "Wouter Deloof",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
