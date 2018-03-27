@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+'use strict';
 
-    const inputs = document.querySelectorAll('input[name="poll__option"]');
-    const submitBtn = document.querySelector('.btn--poll');
+document.addEventListener("DOMContentLoaded", function () {
 
-    inputs.forEach((item) => {
-        item.parentNode.onchange = () => {
+    var inputs = document.querySelectorAll('input[name="poll__option"]');
+    var submitBtn = document.querySelector('.btn--poll');
+
+    inputs.forEach(function (item) {
+        item.parentNode.onchange = function () {
             submitBtn.disabled = false;
-        }
+        };
     });
-
-
 });

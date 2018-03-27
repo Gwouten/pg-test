@@ -6,11 +6,14 @@ const autoprefix = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const imagemin = require("gulp-imagemin");
 const imageminGuetzli = require("imagemin-guetzli");
+const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
+const plumber = require("gulp-plumber");
 
 gulp.task("sass", function() {
   return gulp
     .src("scss/**/*.scss")
+    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefix())
     .pipe(cleanCSS())
@@ -22,11 +25,27 @@ gulp.task("sass", function() {
     );
 });
 
+gulp.task("babel", function() {
+  gulp
+    .src("js/src/*.js")
+    .pipe(
+      babel({
+        presets: ["env"]
+      })
+    )
+    .pipe(gulp.dest("js"))
+    .pipe(
+      browserSync.reload({
+        stream: true
+      })
+    );
+});
+
 gulp.task("watch", ["browserSync", "sass"], function() {
   gulp.watch("scss/**/*.scss", ["sass"]);
   gulp.watch("*.html", reload);
   gulp.watch("*.php", reload);
-  gulp.watch("js/*.js", reload);
+  gulp.watch("js/*.js", ["babel"]);
 });
 
 gulp.task("browserSync", function() {
